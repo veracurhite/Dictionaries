@@ -29,9 +29,23 @@ namespace dictionaries {
         return dictionaryDictionary[name1][name][valuename]
     }
     //% block="Mass-add names $names values $values to dictionary $dict"
-    export function massAdd(names: Array<string>,values: Array<number>,dict: string){
+    export function massAdd(names: Array<string>,values: Array<any>,dict: string){
         for(jbvhcfhbufdvihuhbhn=0;jbvhcfhbufdvihuhbhn<names.length;jbvhcfhbufdvihuhbhn++){
             dictionaryDictionary[dict][names[jbvhcfhbufdvihuhbhn]]=values[jbvhcfhbufdvihuhbhn]
         }
+    }
+    //% block="Mass-add names $names values $values to dictionary $dict in dictionary $dictIn"
+    export function massAddNested(names: Array<string>, values: Array<any>, dict: string, dictIn: string){
+        for (jbvhcfhbufdvihuhbhn = 0; jbvhcfhbufdvihuhbhn < names.length; jbvhcfhbufdvihuhbhn++) {
+            dictionaryDictionary[dictIn][dict][names[jbvhcfhbufdvihuhbhn]] = values[jbvhcfhbufdvihuhbhn]
+        }
+    }
+    //% block="Get length of dictionary $dict"
+    export function getLength(dict: string){
+        return dictionaryDictionary[dict].length
+    }
+    //% block="Get length of dictionary $dict in dictionary $dictIn"
+    export function getNestedLength(dict: string,dictIn: string) {
+        return dictionaryDictionary[dictIn][dict].length
     }
 }
