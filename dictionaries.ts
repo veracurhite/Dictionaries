@@ -1,5 +1,5 @@
 let dictionaryDictionary: any = {}
-
+let jbvhcfhbufdvihuhbhn: number
 //% block="Dictionaries"
 //% color=#555500
 //% icon="\uf02d"
@@ -27,5 +27,11 @@ namespace dictionaries {
     //% block="Get value at nested dictionary $name that is is dictionary $name1 at value $valuename"
     export function getNested(name:string,name1:string,valuename:string){
         return dictionaryDictionary[name1][name][valuename]
+    }
+    //% block="Mass-add names $names values $values to dictionary $dict"
+    export function massAdd(names: Array<string>,values: Array<number>,dict: string){
+        for(jbvhcfhbufdvihuhbhn=0;jbvhcfhbufdvihuhbhn<names.length;jbvhcfhbufdvihuhbhn++){
+            dictionaryDictionary[dict][names[jbvhcfhbufdvihuhbhn]]=values[jbvhcfhbufdvihuhbhn]
+        }
     }
 }
