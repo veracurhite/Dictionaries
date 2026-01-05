@@ -30,12 +30,18 @@ namespace dictionaries {
     }
     //% block="Mass-add names $names values $values to dictionary $dict"
     export function massAdd(names: Array<string>,values: Array<any>,dict: string){
+        if(names.length!=values.length){
+            throw "lists must be same length"
+        }
         for(jbvhcfhbufdvihuhbhn=0;jbvhcfhbufdvihuhbhn<names.length;jbvhcfhbufdvihuhbhn++){
             dictionaryDictionary[dict][names[jbvhcfhbufdvihuhbhn]]=values[jbvhcfhbufdvihuhbhn]
         }
     }
     //% block="Mass-add names $names values $values to dictionary $dict in dictionary $dictIn"
     export function massAddNested(names: Array<string>, values: Array<any>, dict: string, dictIn: string){
+        if (names.length != values.length) {
+            throw "lists must be same length"
+        }
         for (jbvhcfhbufdvihuhbhn = 0; jbvhcfhbufdvihuhbhn < names.length; jbvhcfhbufdvihuhbhn++) {
             dictionaryDictionary[dictIn][dict][names[jbvhcfhbufdvihuhbhn]] = values[jbvhcfhbufdvihuhbhn]
         }
